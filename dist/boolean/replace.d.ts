@@ -1,5 +1,5 @@
 import Validatable from "../validatable";
-export declare type Replace<ValidatableT extends Validatable, Replace extends boolean> = {
-    [Key in keyof ValidatableT]: Key extends 'valid' ? Replace : ValidatableT[Key];
+export declare type Replace<ValidatableType extends Validatable, Replace extends boolean> = {
+    [Key in keyof ValidatableType]: Key extends 'valid' ? Replace : ValidatableType[Key];
 };
 export default Replace;

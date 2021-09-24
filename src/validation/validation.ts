@@ -1,4 +1,4 @@
 import Validatable from "../validatable";
-export default interface Validation<FunctionT extends (...args:unknown[])=>Validatable> {
-    validation : FunctionT
+export default interface Validation<FunctionType extends (...args:unknown[])=>Validatable> {
+    validation : FunctionType
 }
