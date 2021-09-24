@@ -3,6 +3,9 @@ import Argument from "@dikac/t-function/argument/argument";
 import Call from "@dikac/t-boolean/validation/boolean/call";
 import Validation from "@dikac/t-boolean/validation/validation";
 
+/**
+ * create validatable from callback
+ */
 export default class Callback<
     Arguments extends any[],
     Return extends boolean,
