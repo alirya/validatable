@@ -1,12 +1,10 @@
-import ValidatableInterface from "../validatable";
 import Validatable from "../validatable";
-import MessageValid from "./string/valid";
 import ThrowableValid from "./throwable/valid";
 import BooleanValid from "../boolean/valid";
 import Callback from "@dikac/t-function/assert/callback";
 
 /**
- * Throw exception if given value is not {@link ValidatableInterface} type
+ * Throw exception if {@link ValidatableInterface} is not valid (return false)
  */
 
 export default function Valid<

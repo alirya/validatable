@@ -1,10 +1,14 @@
 import Name from "@dikac/t-object/string/name";
-import Sentence from "@dikac/t-string/message/sentence";
 export default function Valid(validatable, conversion = Name) {
-    let sentence = new Sentence(validatable.valid);
-    sentence.subject = conversion(validatable);
-    sentence.reject = 'is not';
-    sentence.expect = 'valid';
-    return sentence.message;
+    const message = [];
+    message.push(conversion(validatable).trim());
+    if (validatable.valid) {
+        message.push('is');
+    }
+    else {
+        message.push('is not');
+    }
+    message.push('valid.');
+    return message.join(' ');
 }
 //# sourceMappingURL=valid.js.map

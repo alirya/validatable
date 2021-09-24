@@ -1,1 +1,5 @@
-export default function Validatable(value: object, subject?: string): Error;
+import Validatable from "../error/validatable";
+/**
+ * @deprecated
+ */
+export default Validatable;

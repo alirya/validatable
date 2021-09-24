@@ -1,1 +1,1 @@
-{"version":3,"file":"validatable.js","sourceRoot":"","sources":["../../src/boolean/validatable.ts"],"names":[],"mappings":"AACA,OAAO,WAAW,MAAM,0BAA0B,CAAC;AAEnD;;GAEG;AACH,MAAM,CAAC,OAAO,UAAU,WAAW,CAC/B,KAAc;IAId,IAAG,WAAW,CAAE,KAAqB,CAAC,KAAK,CAAC,EAAE;QAE1C,OAAO,IAAI,CAAC;KACf;IAED,OAAO,KAAK,CAAC;AACjB,CAAC"}
+{"version":3,"file":"validatable.js","sourceRoot":"","sources":["../../src/boolean/validatable.ts"],"names":[],"mappings":"AACA,OAAO,WAAW,MAAM,0BAA0B,CAAC;AAEnD;;GAEG;AACH,MAAM,CAAC,OAAO,UAAU,WAAW,CAC/B,KAAc;IAGd,OAAO,WAAW,CAAE,KAAqB,CAAC,KAAK,CAAC,CAAC;AACrD,CAAC"}

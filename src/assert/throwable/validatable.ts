@@ -1,9 +1,6 @@
-import ValidatableMessage from "../string/validatable";
+import Validatable from "../error/validatable";
 
-export default function Validatable(
-    value : object,
-    subject : string = ''
-) : Error {
-
-    return new Error(ValidatableMessage(false, value, subject));
-}
+/**
+ * @deprecated
+ */
+export default Validatable;

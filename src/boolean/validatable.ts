@@ -8,13 +8,7 @@ export default function Validatable(
     value : object
 ) : value is Validatable  {
 
-
-    if(TypeBoolean((value as Validatable).valid)) {
-
-        return true;
-    }
-
-    return false;
+    return TypeBoolean((value as Validatable).valid);
 }
 
 

@@ -6,7 +6,7 @@ import Value from "@dikac/t-value/value";
  * @deprecated
  * Wrap {@link Validatable} and cache its value
  *
- * suitable to cached value from heave operation
+ * suitable to cached value from heavy operation
  */
 export default class Memoize<Container extends Validatable> implements Readonly<Validatable<Infer<Container>>> {
     subject: Container;

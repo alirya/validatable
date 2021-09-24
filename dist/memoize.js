@@ -3,7 +3,7 @@ import ValueMemoize from "@dikac/t-value/memoize";
  * @deprecated
  * Wrap {@link Validatable} and cache its value
  *
- * suitable to cached value from heave operation
+ * suitable to cached value from heavy operation
  */
 export default class Memoize {
     constructor(subject) {
