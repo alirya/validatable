@@ -1,7 +1,6 @@
-export default class Validator extends Error {
-    constructor(validatable, message) {
-        super(message);
-        this.validatable = validatable;
-    }
-}
+import Validatable from "./validatable";
+/**
+ * @deprecated
+ */
+export default Validatable;
 //# sourceMappingURL=validator.js.map

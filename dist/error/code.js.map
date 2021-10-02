@@ -1,0 +1,1 @@
+{"version":3,"file":"code.js","sourceRoot":"","sources":["../../src/error/code.ts"],"names":[],"mappings":"AAAA,OAAO,WAAW,MAAM,eAAe,CAAC;AAIxC,MAAM,CAAC,OAAO,OAAO,IAGnB,SAAQ,WAA4B;IAElC,YACI,WAA6B,EAC7B,OAAe,EACN,IAAc;QAEvB,KAAK,CAAC,WAAW,EAAE,OAAO,CAAC,CAAC;QAFnB,SAAI,GAAJ,IAAI,CAAU;IAG3B,CAAC;CACJ"}

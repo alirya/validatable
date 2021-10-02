@@ -1,12 +1,7 @@
-import Validatable from "../validatable";
-import ValidatableContainer from "../validatable/Validatable";
+import Validatable from "./validatable";
 
-export default class Validator<ValidatableType extends Validatable>
-    extends Error
-    implements ValidatableContainer<ValidatableType> {
-
-    constructor(readonly validatable : ValidatableType, message?: string) {
-        super(message);
-    }
-}
+/**
+ * @deprecated
+ */
+export default Validatable;
 
