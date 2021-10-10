@@ -1,6 +1,6 @@
-import Validatable from "./validatable";
+import Validator from "./invalid";
 /**
  * @deprecated
  */
-export default Validatable;
+export default Validator;
 //# sourceMappingURL=validator.js.map

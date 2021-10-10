@@ -1,13 +1,7 @@
-import ValidatableInterface from "../validatable";
-import ValidatableContainer from "../validatable/Validatable";
-import Message from "@dikac/t-message/message";
+import Validatable from "./invalid";
 
-export default class Validatable<ValidatableType extends ValidatableInterface>
-    extends Error
-    implements ValidatableContainer<ValidatableType>, Message<string> {
-
-    constructor(readonly validatable : ValidatableType, message: string) {
-        super(message);
-    }
-}
+/**
+ * @deprecated
+ */
+export default Validatable;
 
