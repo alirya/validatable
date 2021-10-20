@@ -5,7 +5,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('true invalid', ()=>{
 
-    expect(Validatable(true, {}, 'value')).toBe(
+    expect(Validatable({valid:true, value:{}, subject:'value'})).toBe(
         'value "Object" is compatible with Validatable type.'
     );
 
@@ -13,7 +13,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Validatable(false, {message:1}, 'value')).toBe(
+    expect(Validatable({valid :false, value:{message:1}, subject:'value'})).toBe(
         'value "Object" is not compatible with Validatable type.'
     );
 

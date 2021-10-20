@@ -6,7 +6,7 @@ import Validator from "../../error/validator";
  * @param validatable
  * @param conversion
  */
-export default function Valid(validatable, conversion = value => typeof value) {
-    return new Validator(validatable, ValidType(validatable, conversion));
+export default function Valid({ validatable, conversion, }) {
+    return new Validator({ validatable, message: ValidType({ validatable, conversion }) });
 }
 //# sourceMappingURL=valid.js.map

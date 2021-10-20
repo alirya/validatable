@@ -6,7 +6,7 @@ import Name from "@dikac/t-object/string/name";
  * @param value
  * @param subject
  */
-export default function Validatable(valid, value, subject = '') {
+export default function Validatable({ valid, value, subject = '', }) {
     const message = [];
     message.push(`${subject} "${Name(value)}"`.trim());
     if (valid) {

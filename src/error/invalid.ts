@@ -6,8 +6,12 @@ export default class Invalid<ValidatableType extends ValidatableInterface>
     extends Error
     implements ValidatableContainer<ValidatableType>, Message<string> {
 
-    constructor(readonly validatable : ValidatableType, message: string) {
+    readonly validatable : ValidatableType;
+
+    constructor({validatable, message} : ValidatableContainer<ValidatableType> & Message<string>) {
         super(message);
+
+        this.validatable = validatable;
     }
 }
 

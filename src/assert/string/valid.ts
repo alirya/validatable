@@ -1,10 +1,11 @@
 import Name from "@dikac/t-object/string/name";
 import Validatable from "../../validatable";
+import ValidatableContainer from "../../validatable/validatable";
 
-export default function Valid<ValidatableType extends Validatable>(
-    validatable: ValidatableType,
-    conversion : (object : ValidatableType) => string = Name,
-) : string {
+export default function Valid<ValidatableType extends Validatable>({
+    validatable,
+    conversion = Name,
+} : ValidatableContainer<ValidatableType> & {conversion?:(object : ValidatableType) => string}) : string {
 
     const message : string[] = [];
 

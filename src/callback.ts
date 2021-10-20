@@ -7,19 +7,17 @@ import Validation from "@dikac/t-boolean/validation/validation";
  * create validatable from callback
  */
 export default class Callback<
-    Arguments extends any[],
     Return extends boolean,
-> implements Readonly<Validatable<Return>>, Argument<Arguments>, Validation<Arguments, Return>
+> implements Readonly<Validatable<Return>>, Validation<[], Return>
 {
     constructor(
-        readonly argument : Arguments,
-        readonly validation : (...args:Arguments)=>Return,
+        readonly validation : ()=>Return,
     ) {
     }
 
     get valid () : Return {
 
-        return <Return> Call(this);
+        return <Return> this.validation();
     }
 
 }

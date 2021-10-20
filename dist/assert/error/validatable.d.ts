@@ -1,1 +1,4 @@
-export default function Validatable(value: object, subject?: string): Error;
+import Value from "@dikac/t-value/value";
+export default function Validatable({ value, subject }: Value<object> & {
+    subject?: string;
+}): Error;

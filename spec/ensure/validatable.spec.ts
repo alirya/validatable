@@ -7,16 +7,16 @@ describe("valid", function() {
 
     it("class", () =>{
 
-        let data = {valid:true};
-        let guarded = Guard(data);
+        let value = {valid:true};
+        let guarded = Guard({value});
 
         expect(Type(guarded)).toBeTrue()
     });
 
     it("object", () => {
 
-        let object = { valid : true};
-        let guarded = Guard(object);
+        let value = { valid : true};
+        let guarded = Guard({value});
 
         expect(Type(guarded)).toBeTrue()
     });
@@ -28,9 +28,9 @@ describe("valid", function() {
                 return true;
             }
         }
-        let data = new Getter;
+        let value = new Getter;
 
-        let guarded = Guard(data);
+        let guarded = Guard({value});
 
         expect(Type(guarded)).toBeTrue()
     });
@@ -46,18 +46,18 @@ describe("valid", function() {
             }
         }
 
-        let data = new Getter;
+        let value = new Getter;
 
-        let guarded = Guard(data);
+        let guarded = Guard({value});
 
         expect(Type(guarded)).toBeTrue()
     });
 
     it("plain object", () => {
 
-        let data = { valid :  true};
+        let value = { valid :  true};
 
-        let guarded = Guard(data);
+        let guarded = Guard({value});
 
         expect(Type(guarded)).toBeTrue()
     });
@@ -70,11 +70,11 @@ describe("invalid", function() {
 
     it("class", () => {
 
-        let data = new String('a');
+        let value = new String('a');
 
         try {
 
-            Guard(data);
+            Guard({value});
             fail('exception should be thrown');
 
         } catch (e) {
@@ -92,11 +92,11 @@ describe("invalid", function() {
             }
         }
 
-        let data = new Setter;
+        let value = new Setter;
 
         try {
 
-            Guard(data);
+            Guard({value});
             fail('exception should be thrown');
 
         } catch (e) {

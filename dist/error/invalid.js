@@ -1,5 +1,5 @@
 export default class Invalid extends Error {
-    constructor(validatable, message) {
+    constructor({ validatable, message }) {
         super(message);
         this.validatable = validatable;
     }

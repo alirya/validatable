@@ -1,5 +1,5 @@
 import ValidatableType from "../boolean/validatable";
-import ThrowableType from "./throwable/validatable";
+import ThrowableType from "./error/validatable";
 import Callback from "@dikac/t-function/assert/callback";
 /**
  * Throw exception if given value is not {@link Validatable} type

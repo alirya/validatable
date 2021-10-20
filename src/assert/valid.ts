@@ -1,5 +1,5 @@
 import Validatable from "../validatable";
-import ThrowableValid from "./throwable/valid";
+import ThrowableValid from "./error/valid";
 import BooleanValid from "../boolean/valid";
 import Callback from "@dikac/t-function/assert/callback";
 
@@ -12,7 +12,7 @@ export default function Valid<
     Argument extends Validatable = Validatable,
 >(
     value : Argument,
-    error : (value:Argument)=>Error = ThrowableValid
+    error : (validatable:Argument)=>Error = (validatable)=>ThrowableValid({validatable})
 ) : asserts value is Assumption {
 
     Callback(value, BooleanValid, error);

@@ -1,14 +1,12 @@
-import Call from "@dikac/t-boolean/validation/boolean/call";
 /**
  * create validatable from callback
  */
 export default class Callback {
-    constructor(argument, validation) {
-        this.argument = argument;
+    constructor(validation) {
         this.validation = validation;
     }
     get valid() {
-        return Call(this);
+        return this.validation();
     }
 }
 //# sourceMappingURL=callback.js.map

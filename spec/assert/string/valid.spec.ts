@@ -5,7 +5,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('true invalid', ()=>{
 
-    expect(Valid({valid:true})).toBe(
+    expect(Valid({validatable :{valid:true}})).toBe(
         'Object is valid.'
     );
 
@@ -13,7 +13,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Valid({valid:false})).toBe(
+    expect(Valid({validatable :{valid:false}})).toBe(
         'Object is not valid.'
     );
 

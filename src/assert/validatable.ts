@@ -1,5 +1,5 @@
 import ValidatableType from "../boolean/validatable";
-import ThrowableType from "./throwable/validatable";
+import ThrowableType from "./error/validatable";
 import Validatable from "../validatable";
 import Callback from "@dikac/t-function/assert/callback";
 
