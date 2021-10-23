@@ -6,6 +6,6 @@ import Message from "@dikac/t-message/message";
 export declare type Argument<ValidatableType extends ValidatableInterface, CodeType> = ValidatableContainer<ValidatableType> & CodeInterface<CodeType> & Message<string>;
 export default class Code<ValidatableType extends ValidatableInterface, CodeType> extends Invalid<ValidatableType> implements CodeInterface<CodeType> {
     readonly code: CodeType;
-    constructor({ validatable, message, code }: Argument<ValidatableType, CodeType>);
+    constructor(argument: Argument<ValidatableType, CodeType>);
     constructor(validatable: ValidatableType, message: string, code: CodeType);
 }

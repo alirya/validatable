@@ -18,11 +18,7 @@ export default class Code<
 
     readonly code : CodeType;
 
-    constructor({
-        validatable,
-        message,
-        code
-    } : Argument<ValidatableType, CodeType>);
+    constructor(argument : Argument<ValidatableType, CodeType>);
 
     constructor(
         validatable : ValidatableType,

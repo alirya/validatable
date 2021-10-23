@@ -12,9 +12,8 @@ export default class CallbackArgument<Arguments extends any[], Return extends bo
      * destructure version
      *
      * @param argument
-     * @param validation
      */
-    constructor({ argument, validation, }: Argument<Arguments, Return>);
+    constructor(argument: Argument<Arguments, Return>);
     /**
      * parameter version
      *

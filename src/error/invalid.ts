@@ -11,7 +11,7 @@ export default class Invalid<ValidatableType extends ValidatableInterface>
 
     readonly validatable : ValidatableType;
 
-    constructor({validatable, message} : Argument<ValidatableType>);
+    constructor(argument : Argument<ValidatableType>);
 
     constructor(
         validatable : Argument<ValidatableType>['validatable'],

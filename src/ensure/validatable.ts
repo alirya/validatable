@@ -8,11 +8,7 @@ import ThrowableType from "../assert/error/validatable";
  *
  */
 
-export default function Validatable({
-        value,
-        error,
-    } : Value<object> & {error?:(value:object)=>Error}
-) : Validatable;
+export default function Validatable(argument : Value<object> & {error?:(value:object)=>Error}) : Validatable;
 
 export default function Validatable(
     value : Value<object>,

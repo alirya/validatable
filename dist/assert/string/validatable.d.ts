@@ -10,5 +10,5 @@ import Value from "@dikac/t-value/value";
 export declare type Argument = ValidatableType & Value<object> & {
     subject?: string;
 };
-export default function Validatable({ valid, value, subject, }: Argument): string;
+export default function Validatable(argument: Argument): string;
 export default function Validatable(valid: boolean, value: object, subject?: string): string;

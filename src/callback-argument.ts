@@ -29,12 +29,8 @@ export default class CallbackArgument<
       * destructure version
       *
       * @param argument
-      * @param validation
       */
-     constructor({
-         argument,
-         validation,
-     } : Argument<Arguments, Return>);
+     constructor(argument : Argument<Arguments, Return>);
 
      /**
       * parameter version

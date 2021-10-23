@@ -1,10 +1,7 @@
 import ValidatableMessage from "../string/validatable";
 import Value from "@dikac/t-value/value";
 
-export default function Validatable({
-    value,
-    subject
-} : Value<object> & {subject ?: string});
+export default function Validatable(argument : Value<object> & {subject ?: string});
 
 export default function Validatable(
     value : object,
