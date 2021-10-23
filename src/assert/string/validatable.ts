@@ -9,11 +9,31 @@ import Value from "@dikac/t-value/value";
  * @param subject
  */
 
+export type Argument = ValidatableType & Value<object> & {subject ?: string};
+
 export default function Validatable({
     valid,
     value,
-    subject = '',
-} : ValidatableType & Value<object> & {subject ?: string}) : string {
+    subject,
+} : Argument) : string;
+
+export default function Validatable(
+    valid : boolean,
+    value : object,
+    subject ?: string,
+) : string;
+
+export default function Validatable(
+    valid : boolean|Argument,
+    value ? : object,
+    subject : string = '',
+) : string {
+
+    if(arguments.length === 1) {
+
+        ({valid, value, subject} = valid as Required<Argument>)
+    }
+
 
     const message : string[] = [];
 

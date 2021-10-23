@@ -1,8 +1,12 @@
 import ValidType from "../string/valid";
 import Validatable from "../../validatable";
 import ValidatableContainer from "../../validatable/validatable";
-import Validator from "../../error/validator";
+import Invalid from "../../error/invalid";
 
+export type Argument<Argument extends Validatable> =
+    ValidatableContainer<Argument> &
+    {conversion?: (value: Argument) => string}
+;
 /**
  * assert if {@see Validatable} is valid
  *
@@ -10,11 +14,30 @@ import Validator from "../../error/validator";
  * @param conversion
  */
 export default function Valid<
-    Argument extends Validatable = Validatable
+    ArgumentType extends Validatable = Validatable
 >({
     validatable,
     conversion,
-} : ValidatableContainer<Argument> & {conversion?: (value: Argument) => string}) : Validator<Argument> {
+} : Argument<ArgumentType>) : Invalid<ArgumentType>;
 
-    return new Validator({validatable, message:ValidType({validatable, conversion})})
+export default function Valid<
+    ArgumentType extends Validatable = Validatable
+>(
+    validatable : ArgumentType,
+    conversion ?: (value:ArgumentType) => string
+) : Invalid<ArgumentType>;
+
+export default function Valid<
+    ArgumentType extends Validatable = Validatable
+>(
+    validatable : ArgumentType|Argument<ArgumentType>,
+    conversion : (value:ArgumentType)=>string = value => typeof value
+) : Invalid<ArgumentType> {
+
+    if(arguments.length === 1) {
+
+        ({conversion, validatable} = validatable as Required<Argument<ArgumentType>>)
+    }
+
+    return new Invalid(validatable as ArgumentType, ValidType(validatable as ArgumentType, conversion));
 }

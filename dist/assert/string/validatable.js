@@ -1,12 +1,8 @@
 import Name from "@dikac/t-object/string/name";
-/**
- * string intended for empty object
- *
- * @param valid
- * @param value
- * @param subject
- */
-export default function Validatable({ valid, value, subject = '', }) {
+export default function Validatable(valid, value, subject = '') {
+    if (arguments.length === 1) {
+        ({ valid, value, subject } = valid);
+    }
     const message = [];
     message.push(`${subject} "${Name(value)}"`.trim());
     if (valid) {

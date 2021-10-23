@@ -1,12 +1,9 @@
 import ValidType from "../string/valid";
-import Validator from "../../error/validator";
-/**
- * assert if {@see Validatable} is valid
- *
- * @param validatable
- * @param conversion
- */
-export default function Valid({ validatable, conversion, }) {
-    return new Validator({ validatable, message: ValidType({ validatable, conversion }) });
+import Invalid from "../../error/invalid";
+export default function Valid(validatable, conversion = value => typeof value) {
+    if (arguments.length === 1) {
+        ({ conversion, validatable } = validatable);
+    }
+    return new Invalid(validatable, ValidType(validatable, conversion));
 }
 //# sourceMappingURL=valid.js.map

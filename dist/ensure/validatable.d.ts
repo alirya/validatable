@@ -7,3 +7,4 @@ import Value from "@dikac/t-value/value";
 export default function Validatable({ value, error, }: Value<object> & {
     error?: (value: object) => Error;
 }): Validatable;
+export default function Validatable(value: Value<object>, error?: (value: object) => Error): Validatable;
