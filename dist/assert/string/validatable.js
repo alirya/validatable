@@ -1,8 +1,20 @@
 import Name from "@dikac/t-object/string/name";
-export default function Validatable(valid, value, subject = '') {
-    if (arguments.length === 1) {
-        ({ valid, value, subject } = valid);
-    }
+export default Validatable;
+var Validatable;
+(function (Validatable) {
+    Validatable.Parameter = ValidatableParameter;
+    Validatable.Object = ValidatableObject;
+})(Validatable || (Validatable = {}));
+export function ValidatableObject({ valid, value, subject }) {
+    return ValidatableParameter(valid, value, subject);
+}
+/**
+ *
+ * @param valid
+ * @param value
+ * @param subject
+ */
+export function ValidatableParameter(valid, value, subject) {
     const message = [];
     message.push(`${subject} "${Name(value)}"`.trim());
     if (valid) {

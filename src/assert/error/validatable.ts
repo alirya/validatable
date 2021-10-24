@@ -1,22 +1,23 @@
 import ValidatableMessage from "../string/validatable";
 import Value from "@dikac/t-value/value";
 
-export default function Validatable(argument : Value<object> & {subject ?: string});
+export default Validatable;
 
-export default function Validatable(
+namespace Validatable {
+
+    export const Parameter = ValidatableParameter;
+    export const Object = ValidatableObject;
+}
+
+export function ValidatableObject({value, subject} : Value<object> & {subject ?: string}) : Error {
+
+    return ValidatableParameter(value, subject);
+}
+
+export function ValidatableParameter(
     value : object,
     subject ?: string
-);
-
-export default function Validatable(
-    value : object|(Value<object> & {subject ?: string}),
-    subject : string = ''
 ) : Error {
 
-    if(arguments.length === 1) {
-
-        ({value, subject} = value as Value<object> & {subject : string})
-    }
-
-    return new Error(ValidatableMessage({valid:false, value, subject}));
+    return new Error(ValidatableMessage.Parameter(false, value, subject));
 }

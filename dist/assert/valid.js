@@ -4,7 +4,7 @@ import Callback from "@dikac/t-function/assert/callback";
 /**
  * Throw exception if {@link ValidatableInterface} is not valid (return false)
  */
-export default function Valid(value, error = (validatable) => ThrowableValid({ validatable })) {
+export default function Valid(value, error = ThrowableValid.Parameter) {
     Callback(value, BooleanValid, error);
 }
 //# sourceMappingURL=valid.js.map

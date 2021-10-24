@@ -2,35 +2,39 @@ import ValidatableInterface from "../validatable";
 import ValidatableContainer from "../validatable/Validatable";
 import Message from "@dikac/t-message/message";
 
+export default Invalid;
+
 export type Argument<ValidatableType extends ValidatableInterface> =
     ValidatableContainer<ValidatableType> & Message<string>;
 
-export default class Invalid<ValidatableType extends ValidatableInterface>
+export type InvalidParameterType<ValidatableType extends ValidatableInterface> = ValidatableContainer<ValidatableType> & Message<string> & Error;
+
+export class InvalidParameter<ValidatableType extends ValidatableInterface>
     extends Error
-    implements ValidatableContainer<ValidatableType>, Message<string> {
-
-    readonly validatable : ValidatableType;
-
-    constructor(argument : Argument<ValidatableType>);
+    implements InvalidParameterType<ValidatableType> {
 
     constructor(
-        validatable : Argument<ValidatableType>['validatable'],
+        readonly validatable : Argument<ValidatableType>['validatable'],
         message : Argument<ValidatableType>['message']
-    );
-
-    constructor(
-        validatable : Argument<ValidatableType>['validatable']|Argument<ValidatableType>,
-        message ?: Argument<ValidatableType>['message']
     ) {
 
-        if(arguments.length === 1) {
-
-            ({validatable, message} = validatable as Argument<ValidatableType>);
-        }
-
         super(message);
-
-        this.validatable = validatable as ValidatableType;
     }
 }
+
+export class InvalidObject<ValidatableType extends ValidatableInterface> extends InvalidParameter<ValidatableType> {
+
+    constructor({validatable, message} : Argument<ValidatableType>) {
+
+        super(validatable, message)
+    }
+}
+
+namespace Invalid {
+
+    export const Parameter = InvalidParameter;
+    export const Object = InvalidObject;
+    export type Type<ValidatableType extends ValidatableInterface> = InvalidParameterType<ValidatableType>;
+}
+
 

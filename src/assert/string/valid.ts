@@ -1,33 +1,37 @@
 import Name from "@dikac/t-object/string/name";
 import Validatable from "../../validatable";
 import ValidatableContainer from "../../validatable/validatable";
+import {ValidatableObject, ValidatableParameter} from "./validatable";
+
+export default Valid;
+
+namespace Valid {
+
+    export const Parameter = ValidParameter;
+    export const Object = ValidObject;
+}
 
 export type Argument<ValidatableType extends Validatable> =
     ValidatableContainer<ValidatableType> &
     {conversion?:(object : ValidatableType) => string};
 
-export default function Valid<ValidatableType extends Validatable>(argument : Argument<ValidatableType>) : string;
+export function ValidObject<ValidatableType extends Validatable>(
+    {validatable, conversion} : Argument<ValidatableType>
+) : string {
 
-export default function Valid<ValidatableType extends Validatable>(
+    return ValidParameter(validatable, conversion);
+}
+
+export function ValidParameter<ValidatableType extends Validatable>(
     validatable: ValidatableType,
-    conversion ?: (object : ValidatableType) => string,
-) : string
-
-export default function Valid<ValidatableType extends Validatable>(
-    validatable: ValidatableType|Argument<ValidatableType>,
     conversion : (object : ValidatableType) => string = Name,
 ) : string {
 
-    if(arguments.length === 1) {
-
-        ({conversion, validatable} = validatable as Required<Argument<ValidatableType>>)
-    }
-
     const message : string[] = [];
 
-    message.push(conversion(validatable as ValidatableType).trim());
+    message.push(conversion(validatable).trim());
 
-    if((validatable as ValidatableType).valid) {
+    if((validatable).valid) {
 
         message.push('is');
 

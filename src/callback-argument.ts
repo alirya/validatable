@@ -5,6 +5,7 @@ import Validation from "@dikac/t-boolean/validation/validation";
 import StrictAssign from "@dikac/t-object/strict-assign";
 import {List} from "ts-toolbelt";
 import Map from "@dikac/t-object/map";
+import {InvalidObject, InvalidParameter} from "./error/invalid";
 
 
 export type Argument<
@@ -14,23 +15,11 @@ export type Argument<
 /**
  * create validatable from callback
  */
-export default class CallbackArgument<
+export class CallbackArgumentParameter<
     Arguments extends any[],
     Return extends boolean,
     > implements Readonly<Validatable<Return>>, ArgumentContainer<Arguments>, Validation<Arguments, Return>
 {
-     // readonly argument : Arguments;
-     // readonly validation : (...args:Arguments)=>Return;
-
-     readonly argument !: Arguments;
-     readonly validation !: (...args:Arguments)=>Return;
-
-     /**
-      * destructure version
-      *
-      * @param argument
-      */
-     constructor(argument : Argument<Arguments, Return>);
 
      /**
       * parameter version
@@ -39,19 +28,12 @@ export default class CallbackArgument<
       * @param validation
       */
      constructor(
-         argument : Argument<Arguments, Return>['argument'],
-         validation : Argument<Arguments, Return>['validation'],
-     );
+         readonly argument : Argument<Arguments, Return>['argument'],
+         readonly validation : Argument<Arguments, Return>['validation'],
+     )
 
-     constructor(
-         argument : Argument<Arguments, Return>['argument']|Argument<Arguments, Return>,
-         validation ?: Argument<Arguments, Return>['validation'],
-     ) {
+     {
 
-          if(arguments.length === 1) {
-
-               ({argument, validation} = argument as Validation<Arguments, Return> & ArgumentContainer<Arguments>);
-          }
 
           Object.assign(this, {argument, validation});
      }
@@ -61,3 +43,24 @@ export default class CallbackArgument<
           return <Return> Call(this);
      }
 }
+
+/**
+ * destructure version
+ *
+ * @param argument
+ */
+export class CallbackArgumentObject<Arguments extends any[],Return extends boolean>
+    extends  CallbackArgumentParameter<Arguments, Return> {
+
+     constructor({argument, validation} : Argument<Arguments, Return>) {
+          super(argument, validation)
+     }
+}
+
+namespace CallbackArgument {
+
+     export const Parameter = CallbackArgumentParameter;
+     export const Object = CallbackArgumentObject;
+}
+
+export default CallbackArgument;

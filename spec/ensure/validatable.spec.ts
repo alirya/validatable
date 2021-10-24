@@ -8,7 +8,7 @@ describe("valid", function() {
     it("class", () =>{
 
         let value = {valid:true};
-        let guarded = Guard({value});
+        let guarded = Guard.Object({value});
 
         expect(Type(guarded)).toBeTrue()
     });
@@ -16,7 +16,7 @@ describe("valid", function() {
     it("object", () => {
 
         let value = { valid : true};
-        let guarded = Guard({value});
+        let guarded = Guard.Object({value});
 
         expect(Type(guarded)).toBeTrue()
     });
@@ -30,7 +30,7 @@ describe("valid", function() {
         }
         let value = new Getter;
 
-        let guarded = Guard({value});
+        let guarded = Guard.Object({value});
 
         expect(Type(guarded)).toBeTrue()
     });
@@ -48,7 +48,7 @@ describe("valid", function() {
 
         let value = new Getter;
 
-        let guarded = Guard({value});
+        let guarded = Guard.Object({value});
 
         expect(Type(guarded)).toBeTrue()
     });
@@ -57,7 +57,7 @@ describe("valid", function() {
 
         let value = { valid :  true};
 
-        let guarded = Guard({value});
+        let guarded = Guard.Object({value});
 
         expect(Type(guarded)).toBeTrue()
     });
@@ -74,7 +74,7 @@ describe("invalid", function() {
 
         try {
 
-            Guard({value});
+            Guard.Object({value});
             fail('exception should be thrown');
 
         } catch (e) {
@@ -96,7 +96,7 @@ describe("invalid", function() {
 
         try {
 
-            Guard({value});
+            Guard.Object({value});
             fail('exception should be thrown');
 
         } catch (e) {

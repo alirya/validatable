@@ -1,46 +1,49 @@
-import Invalid from "./invalid";
+import Invalid, {InvalidObject, InvalidParameter} from "./invalid";
 import ValidatableInterface from "../validatable";
 import CodeInterface from "@dikac/t-code/code";
 import ValidatableContainer from "../validatable/validatable";
 import Message from "@dikac/t-message/message";
 
+export default Code;
+
 export type Argument<
     ValidatableType extends ValidatableInterface,
     CodeType
-> = ValidatableContainer<ValidatableType> &
+    > = ValidatableContainer<ValidatableType> &
     CodeInterface<CodeType> &
     Message<string>;
 
-export default class Code<
+export class CodeParameter<
     ValidatableType extends ValidatableInterface,
     CodeType
-> extends Invalid<ValidatableType> implements CodeInterface<CodeType> {
+    > extends Invalid.Parameter<ValidatableType> implements CodeInterface<CodeType> {
 
-    readonly code : CodeType;
-
-    constructor(argument : Argument<ValidatableType, CodeType>);
 
     constructor(
         validatable : ValidatableType,
         message: string,
-        code: CodeType
-    );
-
-    constructor(
-        validatable : ValidatableType|Argument<ValidatableType, CodeType>,
-        message ?: string,
-        code ?: CodeType
+        readonly code: CodeType
     ) {
 
-        if(arguments.length === 1) {
-
-            ({validatable, message, code} = validatable as Argument<ValidatableType, CodeType>);
-        }
-
-
-        super(validatable as ValidatableType, message as string);
-
-
-        this.code = code as CodeType;
+        super(validatable, message as string);
     }
 }
+
+export class CodeObject<
+    ValidatableType extends ValidatableInterface,
+    CodeType
+> extends CodeParameter<ValidatableType, CodeType> {
+
+    constructor({validatable, message, code} : Argument<ValidatableType, CodeType>) {
+
+        super(validatable, message, code)
+    }
+}
+
+namespace Code {
+
+    export const Parameter = CodeParameter;
+    export const Object = CodeObject;
+}
+
+

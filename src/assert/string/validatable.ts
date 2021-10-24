@@ -1,35 +1,32 @@
 import Name from "@dikac/t-object/string/name";
 import ValidatableType from "../../validatable";
 import Value from "@dikac/t-value/value";
+
+export default Validatable;
+
+namespace Validatable {
+
+    export const Parameter = ValidatableParameter;
+    export const Object = ValidatableObject;
+}
+
+export type Argument = ValidatableType & Value<object> & {subject ?: string};
+
+export function ValidatableObject({valid, value, subject} : Argument) : string {
+
+    return ValidatableParameter(valid, value, subject);
+}
 /**
- * string intended for empty object
  *
  * @param valid
  * @param value
  * @param subject
  */
-
-export type Argument = ValidatableType & Value<object> & {subject ?: string};
-
-export default function Validatable(argument : Argument) : string;
-
-export default function Validatable(
+export function ValidatableParameter(
     valid : boolean,
     value : object,
     subject ?: string,
-) : string;
-
-export default function Validatable(
-    valid : boolean|Argument,
-    value ? : object,
-    subject : string = '',
 ) : string {
-
-    if(arguments.length === 1) {
-
-        ({valid, value, subject} = valid as Required<Argument>)
-    }
-
 
     const message : string[] = [];
 

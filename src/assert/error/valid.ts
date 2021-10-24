@@ -3,6 +3,14 @@ import Validatable from "../../validatable";
 import ValidatableContainer from "../../validatable/validatable";
 import Invalid from "../../error/invalid";
 
+export default Valid;
+
+namespace Valid {
+
+    export const Parameter = ValidParameter;
+    export const Object = ValidObject;
+}
+
 export type Argument<Argument extends Validatable> =
     ValidatableContainer<Argument> &
     {conversion?: (value: Argument) => string}
@@ -10,28 +18,19 @@ export type Argument<Argument extends Validatable> =
 /**
  * assert if {@see Validatable} is valid
  */
-export default function Valid<
+export function ValidObject<
     ArgumentType extends Validatable = Validatable
->(argument : Argument<ArgumentType>) : Invalid<ArgumentType>;
+>({validatable, conversion} : Argument<ArgumentType>) : Invalid.Type<ArgumentType> {
 
-export default function Valid<
+    return ValidParameter(validatable, conversion)
+}
+
+export function ValidParameter<
     ArgumentType extends Validatable = Validatable
 >(
     validatable : ArgumentType,
-    conversion ?: (value:ArgumentType) => string
-) : Invalid<ArgumentType>;
-
-export default function Valid<
-    ArgumentType extends Validatable = Validatable
->(
-    validatable : ArgumentType|Argument<ArgumentType>,
     conversion : (value:ArgumentType)=>string = value => typeof value
-) : Invalid<ArgumentType> {
+) : Invalid.Type<ArgumentType> {
 
-    if(arguments.length === 1) {
-
-        ({conversion, validatable} = validatable as Required<Argument<ArgumentType>>)
-    }
-
-    return new Invalid(validatable as ArgumentType, ValidType(validatable as ArgumentType, conversion));
+    return new Invalid.Parameter(validatable as ArgumentType, ValidType.Parameter(validatable as ArgumentType, conversion));
 }

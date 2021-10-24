@@ -5,15 +5,9 @@ export declare type Argument<Arguments extends any[], Return extends boolean> = 
 /**
  * create validatable from callback
  */
-export default class CallbackArgument<Arguments extends any[], Return extends boolean> implements Readonly<Validatable<Return>>, ArgumentContainer<Arguments>, Validation<Arguments, Return> {
-    readonly argument: Arguments;
-    readonly validation: (...args: Arguments) => Return;
-    /**
-     * destructure version
-     *
-     * @param argument
-     */
-    constructor(argument: Argument<Arguments, Return>);
+export declare class CallbackArgumentParameter<Arguments extends any[], Return extends boolean> implements Readonly<Validatable<Return>>, ArgumentContainer<Arguments>, Validation<Arguments, Return> {
+    readonly argument: Argument<Arguments, Return>['argument'];
+    readonly validation: Argument<Arguments, Return>['validation'];
     /**
      * parameter version
      *
@@ -23,3 +17,16 @@ export default class CallbackArgument<Arguments extends any[], Return extends bo
     constructor(argument: Argument<Arguments, Return>['argument'], validation: Argument<Arguments, Return>['validation']);
     get valid(): Return;
 }
+/**
+ * destructure version
+ *
+ * @param argument
+ */
+export declare class CallbackArgumentObject<Arguments extends any[], Return extends boolean> extends CallbackArgumentParameter<Arguments, Return> {
+    constructor({ argument, validation }: Argument<Arguments, Return>);
+}
+declare namespace CallbackArgument {
+    const Parameter: typeof CallbackArgumentParameter;
+    const Object: typeof CallbackArgumentObject;
+}
+export default CallbackArgument;

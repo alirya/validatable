@@ -1,10 +1,18 @@
-export default class Invalid extends Error {
+export default Invalid;
+export class InvalidParameter extends Error {
     constructor(validatable, message) {
-        if (arguments.length === 1) {
-            ({ validatable, message } = validatable);
-        }
         super(message);
         this.validatable = validatable;
     }
 }
+export class InvalidObject extends InvalidParameter {
+    constructor({ validatable, message }) {
+        super(validatable, message);
+    }
+}
+var Invalid;
+(function (Invalid) {
+    Invalid.Parameter = InvalidParameter;
+    Invalid.Object = InvalidObject;
+})(Invalid || (Invalid = {}));
 //# sourceMappingURL=invalid.js.map

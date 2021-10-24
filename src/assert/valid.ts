@@ -12,7 +12,7 @@ export default function Valid<
     Argument extends Validatable = Validatable,
 >(
     value : Argument,
-    error : (validatable:Argument)=>Error = (validatable)=>ThrowableValid({validatable})
+    error : (validatable:Argument)=>Error = ThrowableValid.Parameter
 ) : asserts value is Assumption {
 
     Callback(value, BooleanValid, error);

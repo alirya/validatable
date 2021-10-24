@@ -9,7 +9,7 @@ import Callback from "@dikac/t-function/assert/callback";
 
 export default function Validatable(
     value : object,
-    errorFactory : (value:object)=>Error = ThrowableType
+    errorFactory : (value:object)=>Error = ThrowableType.Parameter
 ) : asserts value is Validatable {
 
     Callback(value, ValidatableType, errorFactory);

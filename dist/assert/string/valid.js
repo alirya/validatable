@@ -1,11 +1,17 @@
 import Name from "@dikac/t-object/string/name";
-export default function Valid(validatable, conversion = Name) {
-    if (arguments.length === 1) {
-        ({ conversion, validatable } = validatable);
-    }
+export default Valid;
+var Valid;
+(function (Valid) {
+    Valid.Parameter = ValidParameter;
+    Valid.Object = ValidObject;
+})(Valid || (Valid = {}));
+export function ValidObject({ validatable, conversion }) {
+    return ValidParameter(validatable, conversion);
+}
+export function ValidParameter(validatable, conversion = Name) {
     const message = [];
     message.push(conversion(validatable).trim());
-    if (validatable.valid) {
+    if ((validatable).valid) {
         message.push('is');
     }
     else {

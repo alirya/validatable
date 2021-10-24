@@ -1,11 +1,19 @@
 import Invalid from "./invalid";
-export default class Code extends Invalid {
+export default Code;
+export class CodeParameter extends Invalid.Parameter {
     constructor(validatable, message, code) {
-        if (arguments.length === 1) {
-            ({ validatable, message, code } = validatable);
-        }
         super(validatable, message);
         this.code = code;
     }
 }
+export class CodeObject extends CodeParameter {
+    constructor({ validatable, message, code }) {
+        super(validatable, message, code);
+    }
+}
+var Code;
+(function (Code) {
+    Code.Parameter = CodeParameter;
+    Code.Object = CodeObject;
+})(Code || (Code = {}));
 //# sourceMappingURL=code.js.map
