@@ -1,5 +1,4 @@
 import Name from "@dikac/t-object/string/name";
-export default Valid;
 var Valid;
 (function (Valid) {
     Valid.Parameter = ValidParameter;
@@ -20,4 +19,5 @@ export function ValidParameter(validatable, conversion = Name) {
     message.push('valid.');
     return message.join(' ');
 }
+export default Valid;
 //# sourceMappingURL=valid.js.map

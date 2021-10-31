@@ -1,7 +1,6 @@
 import ValidatableInterface from "../validatable";
 import ValidatableContainer from "../validatable/Validatable";
 import Message from "@dikac/t-message/message";
-export default Invalid;
 export declare type Argument<ValidatableType extends ValidatableInterface> = ValidatableContainer<ValidatableType> & Message<string>;
 export declare type InvalidParameterType<ValidatableType extends ValidatableInterface> = ValidatableContainer<ValidatableType> & Message<string> & Error;
 export declare class InvalidParameter<ValidatableType extends ValidatableInterface> extends Error implements InvalidParameterType<ValidatableType> {
@@ -16,3 +15,4 @@ declare namespace Invalid {
     const Object: typeof InvalidObject;
     type Type<ValidatableType extends ValidatableInterface> = InvalidParameterType<ValidatableType>;
 }
+export default Invalid;

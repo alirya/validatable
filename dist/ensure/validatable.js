@@ -4,7 +4,6 @@ import ThrowableType from "../assert/error/validatable";
  * Throw exception if given value is no {@link Validatable} type
  *
  */
-export default Validatable;
 var Validatable;
 (function (Validatable) {
     Validatable.Parameter = ValidatableParameter;
@@ -17,4 +16,5 @@ export function ValidatableParameter(value, error = ThrowableType.Parameter) {
 export function ValidatableObject({ value, error }) {
     return ValidatableParameter(value, error);
 }
+export default Validatable;
 //# sourceMappingURL=validatable.js.map

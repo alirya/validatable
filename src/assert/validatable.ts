@@ -12,5 +12,5 @@ export default function Validatable(
     errorFactory : (value:object)=>Error = ThrowableType.Parameter
 ) : asserts value is Validatable {
 
-    Callback(value, ValidatableType, errorFactory);
+    Callback.Parameter(value, ValidatableType, errorFactory);
 }

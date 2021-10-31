@@ -1,5 +1,4 @@
 import Name from "@dikac/t-object/string/name";
-export default Validatable;
 var Validatable;
 (function (Validatable) {
     Validatable.Parameter = ValidatableParameter;
@@ -26,4 +25,5 @@ export function ValidatableParameter(valid, value, subject) {
     message.push('Validatable type.');
     return message.join(' ');
 }
+export default Validatable;
 //# sourceMappingURL=validatable.js.map

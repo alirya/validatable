@@ -2,8 +2,6 @@ import ValidatableInterface from "../validatable";
 import ValidatableContainer from "../validatable/Validatable";
 import Message from "@dikac/t-message/message";
 
-export default Invalid;
-
 export type Argument<ValidatableType extends ValidatableInterface> =
     ValidatableContainer<ValidatableType> & Message<string>;
 
@@ -37,4 +35,5 @@ namespace Invalid {
     export type Type<ValidatableType extends ValidatableInterface> = InvalidParameterType<ValidatableType>;
 }
 
+export default Invalid;
 

@@ -1,5 +1,4 @@
 import ValidatableMessage from "../string/validatable";
-export default Validatable;
 var Validatable;
 (function (Validatable) {
     Validatable.Parameter = ValidatableParameter;
@@ -11,4 +10,5 @@ export function ValidatableObject({ value, subject }) {
 export function ValidatableParameter(value, subject) {
     return new Error(ValidatableMessage.Parameter(false, value, subject));
 }
+export default Validatable;
 //# sourceMappingURL=validatable.js.map

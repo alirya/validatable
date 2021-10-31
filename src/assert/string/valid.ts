@@ -3,8 +3,6 @@ import Validatable from "../../validatable";
 import ValidatableContainer from "../../validatable/validatable";
 import {ValidatableObject, ValidatableParameter} from "./validatable";
 
-export default Valid;
-
 namespace Valid {
 
     export const Parameter = ValidParameter;
@@ -44,4 +42,6 @@ export function ValidParameter<ValidatableType extends Validatable>(
 
     return message.join(' ');
 }
+
+export default Valid;
 

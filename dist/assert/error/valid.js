@@ -1,6 +1,5 @@
 import ValidType from "../string/valid";
 import Invalid from "../../error/invalid";
-export default Valid;
 var Valid;
 (function (Valid) {
     Valid.Parameter = ValidParameter;
@@ -15,4 +14,5 @@ export function ValidObject({ validatable, conversion }) {
 export function ValidParameter(validatable, conversion = value => typeof value) {
     return new Invalid.Parameter(validatable, ValidType.Parameter(validatable, conversion));
 }
+export default Valid;
 //# sourceMappingURL=valid.js.map

@@ -4,7 +4,6 @@ import CodeInterface from "@dikac/t-code/code";
 import ValidatableContainer from "../validatable/validatable";
 import Message from "@dikac/t-message/message";
 
-export default Code;
 
 export type Argument<
     ValidatableType extends ValidatableInterface,
@@ -47,3 +46,4 @@ namespace Code {
 }
 
 
+export default Code;

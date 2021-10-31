@@ -15,5 +15,5 @@ export default function Valid<
     error : (validatable:Argument)=>Error = ThrowableValid.Parameter
 ) : asserts value is Assumption {
 
-    Callback(value, BooleanValid, error);
+    Callback.Parameter(value, BooleanValid, error);
 }

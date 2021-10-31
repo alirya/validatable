@@ -1,4 +1,3 @@
-export default Invalid;
 export class InvalidParameter extends Error {
     constructor(validatable, message) {
         super(message);
@@ -15,4 +14,5 @@ var Invalid;
     Invalid.Parameter = InvalidParameter;
     Invalid.Object = InvalidObject;
 })(Invalid || (Invalid = {}));
+export default Invalid;
 //# sourceMappingURL=invalid.js.map

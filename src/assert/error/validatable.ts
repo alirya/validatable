@@ -1,8 +1,6 @@
 import ValidatableMessage from "../string/validatable";
 import Value from "@dikac/t-value/value";
 
-export default Validatable;
-
 namespace Validatable {
 
     export const Parameter = ValidatableParameter;
@@ -21,3 +19,5 @@ export function ValidatableParameter(
 
     return new Error(ValidatableMessage.Parameter(false, value, subject));
 }
+
+export default Validatable;

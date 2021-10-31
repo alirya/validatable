@@ -2,8 +2,6 @@ import Name from "@dikac/t-object/string/name";
 import ValidatableType from "../../validatable";
 import Value from "@dikac/t-value/value";
 
-export default Validatable;
-
 namespace Validatable {
 
     export const Parameter = ValidatableParameter;
@@ -45,3 +43,5 @@ export function ValidatableParameter(
 
     return message.join(' ');
 }
+
+export default Validatable;

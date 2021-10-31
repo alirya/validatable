@@ -3,8 +3,6 @@ import Validatable from "../../validatable";
 import ValidatableContainer from "../../validatable/validatable";
 import Invalid from "../../error/invalid";
 
-export default Valid;
-
 namespace Valid {
 
     export const Parameter = ValidParameter;
@@ -34,3 +32,5 @@ export function ValidParameter<
 
     return new Invalid.Parameter(validatable as ArgumentType, ValidType.Parameter(validatable as ArgumentType, conversion));
 }
+
+export default Valid;

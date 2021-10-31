@@ -1,5 +1,4 @@
 import Invalid from "./invalid";
-export default Code;
 export class CodeParameter extends Invalid.Parameter {
     constructor(validatable, message, code) {
         super(validatable, message);
@@ -16,4 +15,5 @@ var Code;
     Code.Parameter = CodeParameter;
     Code.Object = CodeObject;
 })(Code || (Code = {}));
+export default Code;
 //# sourceMappingURL=code.js.map

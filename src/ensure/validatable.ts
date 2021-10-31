@@ -9,8 +9,6 @@ import {InvalidObject, InvalidParameter} from "../error/invalid";
  *
  */
 
-export default Validatable;
-
 namespace Validatable {
 
     export const Parameter = ValidatableParameter;
@@ -32,4 +30,4 @@ export function ValidatableObject({value, error} : Value<object> & {error?:(valu
     return ValidatableParameter(value, error);
 }
 
-
+export default Validatable;
