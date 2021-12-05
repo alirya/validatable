@@ -1,6 +1,4 @@
 import Validatable from "./validatable";
-import Argument from "@dikac/t-function/argument/argument";
-import Call from "@dikac/t-boolean/validation/boolean/call";
 import Validation from "@dikac/t-boolean/validation/validation";
 
 /**

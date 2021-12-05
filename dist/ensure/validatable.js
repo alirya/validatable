@@ -1,5 +1,5 @@
-import AssertType from "../assert/validatable";
-import ThrowableType from "../assert/error/validatable";
+import { ValidatableParameter } from "./validatable-parameter";
+import ValidatableParameters from "./validatable-parameters";
 /**
  * Throw exception if given value is no {@link Validatable} type
  *
@@ -7,14 +7,7 @@ import ThrowableType from "../assert/error/validatable";
 var Validatable;
 (function (Validatable) {
     Validatable.Parameter = ValidatableParameter;
-    Validatable.Object = ValidatableObject;
+    Validatable.Parameters = ValidatableParameters;
 })(Validatable || (Validatable = {}));
-export function ValidatableParameter(value, error = ThrowableType.Parameter) {
-    AssertType(value, error);
-    return value;
-}
-export function ValidatableObject({ value, error }) {
-    return ValidatableParameter(value, error);
-}
 export default Validatable;
 //# sourceMappingURL=validatable.js.map

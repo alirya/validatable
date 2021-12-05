@@ -1,18 +1,34 @@
-export class InvalidParameter extends Error {
-    constructor(validatable, message) {
-        super(message);
-        this.validatable = validatable;
-    }
-}
-export class InvalidObject extends InvalidParameter {
-    constructor({ validatable, message }) {
-        super(validatable, message);
-    }
-}
+import InvalidParameters from "./invalid-parameters";
+import InvalidParameter from "./invalid-parameter";
+// export type Argument<ValidatableType extends ValidatableInterface> =
+//     ValidatableContainer<ValidatableType> & Message<string>;
+//
+// export type InvalidParameterType<ValidatableType extends ValidatableInterface> = ValidatableContainer<ValidatableType> & Message<string> & Error;
+//
+// export class InvalidParameter<ValidatableType extends ValidatableInterface>
+//     extends Error
+//     implements InvalidParameterType<ValidatableType> {
+//
+//     constructor(
+//         readonly validatable : Argument<ValidatableType>['validatable'],
+//         message : Argument<ValidatableType>['message']
+//     ) {
+//
+//         super(message);
+//     }
+// }
+//
+// export class InvalidObject<ValidatableType extends ValidatableInterface> extends InvalidParameter<ValidatableType> {
+//
+//     constructor({validatable, message} : Argument<ValidatableType>) {
+//
+//         super(validatable, message)
+//     }
+// }
 var Invalid;
 (function (Invalid) {
+    Invalid.Parameters = InvalidParameters;
     Invalid.Parameter = InvalidParameter;
-    Invalid.Object = InvalidObject;
 })(Invalid || (Invalid = {}));
 export default Invalid;
 //# sourceMappingURL=invalid.js.map

@@ -1,15 +1,15 @@
 {
   "name": "@dikac/t-validatable",
-  "version": "0.20.0-beta.4",
+  "version": "0.20.0-beta.6",
   "description": "Typescript validatable",
   "dependencies": {
-    "@dikac/t-boolean": "^0.11.0-beta.0",
-    "@dikac/t-function": "^0.15.0-beta.3",
-    "@dikac/t-object": "^0.37.0-alpha.0",
-    "@dikac/t-string": "^0.15.4",
-    "@dikac/t-value": "^0.14.6",
-    "@dikac/t-message": "^0.11.3",
-    "@dikac/t-code": "^0.2.3",
+    "@dikac/t-boolean": "^0.11.0-beta.2",
+    "@dikac/t-function": "^0.15.0-beta.6",
+    "@dikac/t-object": "^0.37.0-alpha.2",
+    "@dikac/t-string": "^0.16.0-alpha.1",
+    "@dikac/t-value": "^0.15.0-beta.0",
+    "@dikac/t-message": "^0.12.0-alpha.1",
+    "@dikac/t-code": "^0.3.0-alpha.0",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {

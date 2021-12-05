@@ -1,10 +1,10 @@
 import ValidatableType from "../boolean/validatable";
 import ThrowableType from "./error/validatable";
-import Callback from "@dikac/t-function/assert/callback";
+import Callback from "@dikac/t-function/assert/callback-parameters";
 /**
  * Throw exception if given value is not {@link Validatable} type
  */
 export default function Validatable(value, errorFactory = ThrowableType.Parameter) {
-    Callback.Parameter(value, ValidatableType, errorFactory);
+    Callback(value, ValidatableType, errorFactory);
 }
 //# sourceMappingURL=validatable.js.map

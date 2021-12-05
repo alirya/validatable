@@ -1,7 +1,7 @@
 import Validatable from "../validatable";
-import ThrowableValid from "./error/valid";
+import ThrowableValid from "./error/valid-parameters";
 import BooleanValid from "../boolean/valid";
-import Callback from "@dikac/t-function/assert/callback";
+import Callback from "@dikac/t-function/assert/callback-parameters";
 
 /**
  * Throw exception if {@link ValidatableInterface} is not valid (return false)
@@ -12,8 +12,8 @@ export default function Valid<
     Argument extends Validatable = Validatable,
 >(
     value : Argument,
-    error : (validatable:Argument)=>Error = ThrowableValid.Parameter
+    error : (validatable:Argument)=>Error = ThrowableValid
 ) : asserts value is Assumption {
 
-    Callback.Parameter(value, BooleanValid, error);
+    Callback(value, BooleanValid, error);
 }

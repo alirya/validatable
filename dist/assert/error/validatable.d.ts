@@ -1,10 +1,7 @@
-import Value from "@dikac/t-value/value";
+import ValidatableParameter from "./validatable-parameter";
+import ValidatableParameters from "./validatable-parameters";
 declare namespace Validatable {
     const Parameter: typeof ValidatableParameter;
-    const Object: typeof ValidatableObject;
+    const Parameters: typeof ValidatableParameters;
 }
-export declare function ValidatableObject({ value, subject }: Value<object> & {
-    subject?: string;
-}): Error;
-export declare function ValidatableParameter(value: object, subject?: string): Error;
 export default Validatable;

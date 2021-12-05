@@ -1,19 +1,9 @@
-import Invalid from "./invalid";
-export class CodeParameter extends Invalid.Parameter {
-    constructor(validatable, message, code) {
-        super(validatable, message);
-        this.code = code;
-    }
-}
-export class CodeObject extends CodeParameter {
-    constructor({ validatable, message, code }) {
-        super(validatable, message, code);
-    }
-}
+import CodeParameters from "./code-parameters";
+import CodeParameter from "./code-parameter";
 var Code;
 (function (Code) {
+    Code.Parameters = CodeParameters;
     Code.Parameter = CodeParameter;
-    Code.Object = CodeObject;
 })(Code || (Code = {}));
 export default Code;
 //# sourceMappingURL=code.js.map
