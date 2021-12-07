@@ -1,5 +1,5 @@
 import ValidatableType from "../boolean/validatable";
-import ThrowableType from "./error/validatable";
+import ThrowableType from "./error/validatable-parameters";
 import Validatable from "../validatable";
 import Callback from "@dikac/t-function/assert/callback-parameters";
 
@@ -9,7 +9,7 @@ import Callback from "@dikac/t-function/assert/callback-parameters";
 
 export default function Validatable(
     value : object,
-    errorFactory : (value:object)=>Error = ThrowableType.Parameter
+    errorFactory : (value:object)=>Error = ThrowableType
 ) : asserts value is Validatable {
 
     Callback(value, ValidatableType, errorFactory);
