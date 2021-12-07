@@ -1,6 +1,6 @@
 import Validatable from "../../validatable";
 import ValidatableContainer from "../../validatable/validatable";
-import Invalid from "../../error/invalid";
+import {InvalidParameterType} from "../../error/invalid-parameters";
 import ValidParameters from "./valid-parameters";
 
 export type ValidParameterArgument<Argument extends Validatable> =
@@ -12,7 +12,7 @@ export type ValidParameterArgument<Argument extends Validatable> =
  */
 export default function ValidParameter<
     ArgumentType extends Validatable = Validatable
->({validatable, conversion} : ValidParameterArgument<ArgumentType>) : Invalid.Type<ArgumentType> {
+>({validatable, conversion} : ValidParameterArgument<ArgumentType>) : InvalidParameterType<ArgumentType> {
 
     return ValidParameters(validatable, conversion)
 }
