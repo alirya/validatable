@@ -3,8 +3,8 @@
   "version": "0.20.0-beta.7",
   "description": "Typescript validatable",
   "dependencies": {
-    "@dikac/t-boolean": "^0.11.0-beta.4",
-    "@dikac/t-function": "^0.15.0-beta.7",
+    "@dikac/t-boolean": "^0.11.0-beta.6",
+    "@dikac/t-function": "^0.15.0-beta.9",
     "@dikac/t-object": "^0.37.0-alpha.5",
     "@dikac/t-string": "^0.16.0-alpha.4",
     "@dikac/t-value": "^0.15.0-beta.2",
