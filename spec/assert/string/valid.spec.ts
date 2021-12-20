@@ -1,11 +1,11 @@
-import Valid from "../../../dist/assert/string/valid";
+import Valid from "../../../dist/assert/string/valid-parameter";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 
 it('true invalid', ()=>{
 
-    expect(Valid.Parameter({validatable :{valid:true}})).toBe(
+    expect(Valid({validatable :{valid:true}})).toBe(
         'Object is valid.'
     );
 
@@ -13,7 +13,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Valid.Parameter({validatable :{valid:false}})).toBe(
+    expect(Valid({validatable :{valid:false}})).toBe(
         'Object is not valid.'
     );
 
