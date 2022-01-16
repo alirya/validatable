@@ -1,6 +1,6 @@
 import ArgumentContainer from '@alirya/function/argument/argument';
 import Validation from '@alirya/boolean/validation/validation';
-import CallbackArgumentParameters from './callback-argumenparameters';
+import CallbackArgumentParameters from './callback-argument-parameters';
 
 
 export type CallbackArgumentParameterArgument<
