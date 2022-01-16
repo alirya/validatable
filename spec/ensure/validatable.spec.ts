@@ -1,27 +1,27 @@
-import Guard from "../../dist/ensure/validatable-parameter";
-import Type from "../../dist/boolean/validatable";
+import Guard from '../../dist/ensure/validatable-parameter';
+import Type from '../../dist/boolean/validatable';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe("valid", function() {
+describe('valid', function() {
 
-    it("class", () =>{
+    it('class', () =>{
 
         let value = {valid:true};
         let guarded = Guard({value});
 
-        expect(Type(guarded)).toBeTrue()
+        expect(Type(guarded)).toBeTrue();
     });
 
-    it("object", () => {
+    it('object', () => {
 
         let value = { valid : true};
         let guarded = Guard({value});
 
-        expect(Type(guarded)).toBeTrue()
+        expect(Type(guarded)).toBeTrue();
     });
 
-    it("getter", () => {
+    it('getter', () => {
 
         class Getter {
             get valid () : boolean {
@@ -32,11 +32,11 @@ describe("valid", function() {
 
         let guarded = Guard({value});
 
-        expect(Type(guarded)).toBeTrue()
+        expect(Type(guarded)).toBeTrue();
     });
 
 
-    it("getter + setter", () => {
+    it('getter + setter', () => {
 
         class Getter {
             get valid () : boolean {
@@ -50,25 +50,25 @@ describe("valid", function() {
 
         let guarded = Guard({value});
 
-        expect(Type(guarded)).toBeTrue()
+        expect(Type(guarded)).toBeTrue();
     });
 
-    it("plain object", () => {
+    it('plain object', () => {
 
         let value = { valid :  true};
 
         let guarded = Guard({value});
 
-        expect(Type(guarded)).toBeTrue()
+        expect(Type(guarded)).toBeTrue();
     });
 
 });
 
 
 
-describe("invalid", function() {
+describe('invalid', function() {
 
-    it("class", () => {
+    it('class', () => {
 
         let value = new String('a');
 
@@ -84,7 +84,7 @@ describe("invalid", function() {
 
     });
 
-    it("setter", () => {
+    it('setter', () => {
 
         class Setter {
             set valid (value : boolean)  {

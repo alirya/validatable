@@ -1,27 +1,27 @@
-import Validatable from "../../dist/assert/validatable";
+import Validatable from '../../dist/assert/validatable';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 class Test {
     constructor(public valid : boolean) {
     }
 }
 
-describe("valid", function() {
+describe('valid', function() {
 
-    it("class", () =>{
+    it('class', () =>{
 
         let data = new Test(true);
-        expect(Validatable(data)).toBeUndefined()
+        expect(Validatable(data)).toBeUndefined();
     });
 
-    it("object", () => {
+    it('object', () => {
 
         let object = { valid : true};
         expect(Validatable(object)).toBeUndefined();
     });
 
-    it("getter", () => {
+    it('getter', () => {
 
         class Getter {
             get valid () : boolean {
@@ -30,11 +30,11 @@ describe("valid", function() {
         }
         let data = new Getter;
 
-        expect(Validatable(data)).toBeUndefined()
+        expect(Validatable(data)).toBeUndefined();
     });
 
 
-    it("getter + setter", () => {
+    it('getter + setter', () => {
 
         class GetterSetter {
             get valid () : boolean {
@@ -44,15 +44,15 @@ describe("valid", function() {
             }
         }
 
-        expect(Validatable(new GetterSetter)).toBeUndefined()
+        expect(Validatable(new GetterSetter)).toBeUndefined();
     });
 });
 
 
 
-describe("invalid", function() {
+describe('invalid', function() {
 
-    it("class", () => {
+    it('class', () => {
 
         let data = new String('a');
 
@@ -68,7 +68,7 @@ describe("invalid", function() {
 
     });
 
-    it("setter", () => {
+    it('setter', () => {
 
         class Setter {
             set valid (value : boolean)  {

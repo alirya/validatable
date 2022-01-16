@@ -1,4 +1,4 @@
-import ValidatableMessage from "../string/validatable-parameters";
+import ValidatableMessage from '../string/validatable-parameters';
 
 export default function ValidatableParameters(
     value : object,

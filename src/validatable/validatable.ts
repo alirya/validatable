@@ -1,6 +1,6 @@
-import ValidatableInterface from "../validatable";
+import ValidatableInterface from '../validatable';
 
 export default interface Validatable<ValidatableType extends ValidatableInterface> {
 
-    validatable : ValidatableType
+    validatable : ValidatableType;
 }

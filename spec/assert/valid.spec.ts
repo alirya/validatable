@@ -1,27 +1,27 @@
-import Valid from "../../dist/assert/valid";
+import Valid from '../../dist/assert/valid';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 class Test {
     constructor(public valid : boolean) {
     }
 }
 
-describe("valid", function() {
+describe('valid', function() {
 
-    it("class", () =>{
+    it('class', () =>{
 
         let validatable = new Test(true);
         expect(Valid(validatable)).toBeUndefined();
     });
 
-    it("object", () => {
+    it('object', () => {
 
         let object = { valid : true};
         expect(Valid(object)).toBeUndefined();
     });
 
-    it("getter", () => {
+    it('getter', () => {
 
         class Getter {
             get valid () : boolean {
@@ -34,7 +34,7 @@ describe("valid", function() {
     });
 
 
-    it("getter + setter", () => {
+    it('getter + setter', () => {
 
         class GetterSetter {
             get valid () : boolean {
@@ -45,15 +45,15 @@ describe("valid", function() {
         }
 
         let data = new GetterSetter();
-        expect(Valid(data)).toBeUndefined()
+        expect(Valid(data)).toBeUndefined();
     });
 
 });
 
 
-describe("invalid", function() {
+describe('invalid', function() {
 
-    it("class", () =>{
+    it('class', () =>{
 
         let validatable = new Test(false);
 
@@ -69,7 +69,7 @@ describe("invalid", function() {
 
     });
 
-    it("object", () => {
+    it('object', () => {
 
         let object = { valid : false};
 
@@ -84,7 +84,7 @@ describe("invalid", function() {
         }
     });
 
-    it("getter", () => {
+    it('getter', () => {
 
         class Getter {
             get valid () : boolean {
@@ -105,7 +105,7 @@ describe("invalid", function() {
     });
 
 
-    it("getter + setter", () => {
+    it('getter + setter', () => {
 
         class GetterSetter {
             get valid () : boolean {
@@ -119,7 +119,7 @@ describe("invalid", function() {
 
         try {
 
-            Valid(data)
+            Valid(data);
             fail('exception should be thrown');
 
         } catch (e) {

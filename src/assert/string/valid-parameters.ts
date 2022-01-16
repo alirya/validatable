@@ -1,5 +1,5 @@
-import Name from "@alirya/object/string/name";
-import Validatable from "../../validatable";
+import Name from '@alirya/object/string/name';
+import Validatable from '../../validatable';
 
 export default function ValidParameters<ValidatableType extends Validatable>(
     validatable: ValidatableType,

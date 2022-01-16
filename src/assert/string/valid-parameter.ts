@@ -1,6 +1,6 @@
-import Validatable from "../../validatable";
-import ValidatableContainer from "../../validatable/validatable";
-import ValidParameters from "./valid-parameters";
+import Validatable from '../../validatable';
+import ValidatableContainer from '../../validatable/validatable';
+import ValidParameters from './valid-parameters';
 
 export type Argument<ValidatableType extends Validatable> =
     ValidatableContainer<ValidatableType> &

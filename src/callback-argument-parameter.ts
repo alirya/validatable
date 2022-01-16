@@ -1,6 +1,6 @@
-import ArgumentContainer from "@alirya/function/argument/argument";
-import Validation from "@alirya/boolean/validation/validation";
-import CallbackArgumentParameters from "./callback-argumenparameters";
+import ArgumentContainer from '@alirya/function/argument/argument';
+import Validation from '@alirya/boolean/validation/validation';
+import CallbackArgumentParameters from './callback-argumenparameters';
 
 
 export type CallbackArgumentParameterArgument<
@@ -18,7 +18,7 @@ export default class CallbackArgumentParameter<Arguments extends unknown[], Retu
     extends  CallbackArgumentParameters<Arguments, Return> {
 
      constructor({argument, validation} : CallbackArgumentParameterArgument<Arguments, Return>) {
-          super(argument, validation)
+          super(argument, validation);
      }
 }
 

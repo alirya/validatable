@@ -1,6 +1,6 @@
-import AssertType from "../assert/validatable";
-import Validatable from "../validatable";
-import ThrowableType from "../assert/error/validatable-parameters";
+import AssertType from '../assert/validatable';
+import Validatable from '../validatable';
+import ThrowableType from '../assert/error/validatable-parameters';
 
 /**
  * Throw exception if given value is no {@link Validatable} type
@@ -11,7 +11,7 @@ export default function ValidatableParameters(
     error : (value:object)=>Error = ThrowableType,
 ) : Validatable {
 
-    AssertType(value, error)
+    AssertType(value, error);
 
     return value;
 }

@@ -1,6 +1,6 @@
-import Validatable from "../../../dist/assert/string/validatable-parameter";
+import Validatable from '../../../dist/assert/string/validatable-parameter';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 it('true invalid', ()=>{

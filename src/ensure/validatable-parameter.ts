@@ -1,6 +1,6 @@
-import Validatable from "../validatable";
-import Value from "@alirya/value/value";
-import ValidatableParameters from "./validatable-parameters";
+import Validatable from '../validatable';
+import Value from '@alirya/value/value';
+import ValidatableParameters from './validatable-parameters';
 
 /**
  * Throw exception if given value is no {@link Validatable} type

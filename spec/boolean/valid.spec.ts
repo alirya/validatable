@@ -1,15 +1,15 @@
-import Valid from "../../dist/boolean/valid";
-import Validatable from "../../dist/validatable";
-import Value from "@alirya/value/value";
+import Valid from '../../dist/boolean/valid';
+import Validatable from '../../dist/validatable';
+import Value from '@alirya/value/value';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe('compiler compatible', function () {
 
     let argument : Validatable & Value<string> = {
         valid : true,
         value : 'string'
-    }
+    };
 
     if(Valid(argument)) {
 
@@ -31,7 +31,7 @@ it('valid', ()=>{
     let argument : Validatable & Value<string> = {
         valid : true,
         value : 'string'
-    }
+    };
 
     expect(Valid(argument)).toBeTrue();
 });
@@ -42,7 +42,7 @@ it('invalid', ()=>{
     let argument : Validatable & Value<string> = {
         valid : false,
         value : 'string'
-    }
+    };
 
     expect(Valid(argument)).toBeFalse();
 });

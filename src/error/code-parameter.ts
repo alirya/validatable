@@ -1,8 +1,8 @@
-import ValidatableInterface from "../validatable";
-import CodeInterface from "@alirya/code/code";
-import ValidatableContainer from "../validatable/validatable";
-import Message from "@alirya/message/message";
-import CodeParameters from "./code-parameters";
+import ValidatableInterface from '../validatable';
+import CodeInterface from '@alirya/code/code';
+import ValidatableContainer from '../validatable/validatable';
+import Message from '@alirya/message/message';
+import CodeParameters from './code-parameters';
 
 
 export type Argument<
@@ -20,7 +20,7 @@ export default class CodeParameter<
 
     constructor({validatable, message, code} : Argument<ValidatableType, CodeType>) {
 
-        super(validatable, message, code)
+        super(validatable, message, code);
     }
 }
 

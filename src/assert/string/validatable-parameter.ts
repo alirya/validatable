@@ -1,6 +1,6 @@
-import ValidatableType from "../../validatable";
-import Value from "@alirya/value/value";
-import ValidatableParameters from "./validatable-parameters";
+import ValidatableType from '../../validatable';
+import Value from '@alirya/value/value';
+import ValidatableParameters from './validatable-parameters';
 
 export type Argument = ValidatableType & Value<object> & {subject ?: string};
 

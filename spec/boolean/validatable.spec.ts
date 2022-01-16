@@ -1,14 +1,14 @@
-import Type from "../../dist/boolean/validatable";
+import Type from '../../dist/boolean/validatable';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe("valid", function() {
+describe('valid', function() {
 
 
-    it("class", () =>{
+    it('class', () =>{
 
         let data = {valid:true};
-        expect(Type(data)).toBeTrue()
+        expect(Type(data)).toBeTrue();
 
         if(Type(data)) {
 
@@ -16,7 +16,7 @@ describe("valid", function() {
         }
     });
 
-    it("object", () => {
+    it('object', () => {
 
         let data = { valid : true};
         expect(Type(data)).toBeTrue();
@@ -27,7 +27,7 @@ describe("valid", function() {
         }
     });
 
-    it("getter", () => {
+    it('getter', () => {
 
         class Getter {
             get valid () : boolean {
@@ -36,7 +36,7 @@ describe("valid", function() {
         }
         let data = new Getter;
 
-        expect(Type(data)).toBeTrue()
+        expect(Type(data)).toBeTrue();
 
 
         if(Type(data)) {
@@ -46,7 +46,7 @@ describe("valid", function() {
     });
 
 
-    it("getter + setter", () => {
+    it('getter + setter', () => {
 
         class Getter {
             get valid () : boolean {
@@ -58,7 +58,7 @@ describe("valid", function() {
 
         let data = new Getter;
 
-        expect(Type(data)).toBeTrue()
+        expect(Type(data)).toBeTrue();
 
 
         if(Type(data)) {
@@ -67,7 +67,7 @@ describe("valid", function() {
         }
     });
 
-    it("plain object", () => {
+    it('plain object', () => {
 
         let data = { valid :  true};
         expect(Type(data)).toBeTrue();
@@ -82,16 +82,16 @@ describe("valid", function() {
 
 
 
-describe("invalid", function() {
+describe('invalid', function() {
 
-    it("class", () => {
+    it('class', () => {
 
         let data = new String('a');
         expect(Type(data)).toBeFalse();
 
     });
 
-    it("setter", () => {
+    it('setter', () => {
 
         class Setter {
             set valid (value : boolean)  {
@@ -101,7 +101,7 @@ describe("invalid", function() {
 
         let data = new Setter;
 
-        expect(Type(data)).toBeFalse()
+        expect(Type(data)).toBeFalse();
     });
 
 });

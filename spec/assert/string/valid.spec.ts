@@ -1,6 +1,6 @@
-import Valid from "../../../dist/assert/string/valid-parameter";
+import Valid from '../../../dist/assert/string/valid-parameter';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 it('true invalid', ()=>{
