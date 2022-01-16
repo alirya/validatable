@@ -1,6 +1,6 @@
-import ArgumentContainer from "@dikac/t-function/argument/argument";
-import Validation from "@dikac/t-boolean/validation/validation";
-import CallbackArgumentParameters from "./callback-argument-parameters";
+import ArgumentContainer from "@alirya/function/argument/argument";
+import Validation from "@alirya/boolean/validation/validation";
+import CallbackArgumentParameters from "./callback-argumenparameters";
 
 
 export type CallbackArgumentParameterArgument<

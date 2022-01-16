@@ -1,5 +1,5 @@
 import Validatable from "./validatable";
-import Validation from "@dikac/t-boolean/validation/validation";
+import Validation from "@alirya/boolean/validation/validation";
 
 /**
  * create validatable from callback

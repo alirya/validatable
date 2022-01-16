@@ -1,7 +1,7 @@
 import ValidatableInterface from "../validatable";
-import CodeInterface from "@dikac/t-code/code";
+import CodeInterface from "@alirya/code/code";
 import ValidatableContainer from "../validatable/validatable";
-import Message from "@dikac/t-message/message";
+import Message from "@alirya/message/message";
 import CodeParameters from "./code-parameters";
 
 

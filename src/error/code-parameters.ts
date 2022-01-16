@@ -1,6 +1,6 @@
 import Invalid from "./invalid-parameters";
 import ValidatableInterface from "../validatable";
-import CodeInterface from "@dikac/t-code/code";
+import CodeInterface from "@alirya/code/code";
 
 export default class CodeParameters<
     ValidatableType extends ValidatableInterface,

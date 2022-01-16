@@ -1,6 +1,6 @@
 import Valid from "../../dist/boolean/valid";
 import Validatable from "../../dist/validatable";
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -15,7 +15,7 @@ describe('compiler compatible', function () {
 
         let valid : true = argument.valid;
 
-        // @ts-expect-error
+        // @ts-expecerror
         let invalid : false = argument.valid;
 
         let boolean : boolean = argument.valid;

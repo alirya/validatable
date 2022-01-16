@@ -1,2 +1,2 @@
-# t-validatable
+# validatable
 typescript Validatable

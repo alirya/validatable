@@ -1,7 +1,7 @@
 import ValidatableType from "../boolean/validatable";
 import ThrowableType from "./error/validatable-parameters";
 import Validatable from "../validatable";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 
 /**
  * Throw exception if given value is not {@link Validatable} type

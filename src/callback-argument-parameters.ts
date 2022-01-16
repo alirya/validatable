@@ -1,8 +1,8 @@
 import Validatable from "./validatable";
-import ArgumentContainer from "@dikac/t-function/argument/argument";
-import Validation from "@dikac/t-boolean/validation/validation";
-import Callable from "@dikac/t-function/callable";
-import Call from "@dikac/t-function/argument/value/call-parameter";
+import ArgumentContainer from "@alirya/function/argument/argument";
+import Validation from "@alirya/boolean/validation/validation";
+import Callable from "@alirya/function/callable";
+import Call from "@alirya/function/argument/value/call-parameter";
 
 /**
  * create validatable from callback

@@ -1,5 +1,5 @@
 import Validatable from "../validatable";
-import TypeBoolean from "@dikac/t-boolean/boolean";
+import TypeBoolean from "@alirya/boolean/boolean";
 
 /**
  * check if {@param value} is compatible to {@link Validatable} type
