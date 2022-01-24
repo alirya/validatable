@@ -4,7 +4,7 @@ import Value from '@alirya/value/value';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe('compiler compatible', function () {
+it('compiler compatible', function () {
 
     let argument : Validatable & Value<string> = {
         valid : true,
@@ -15,7 +15,7 @@ describe('compiler compatible', function () {
 
         let valid : false = argument.valid;
 
-        // @ts-expecerror
+        // @ts-expect-error
         let invalid : true = argument.valid;
 
         let boolean : boolean = argument.valid;
