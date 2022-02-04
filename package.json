@@ -1,15 +1,15 @@
 {
   "name": "@alirya/validatable",
-  "version": "0.20.0-beta.7",
+  "version": "0.20.0",
   "description": "Typescript validatable",
   "dependencies": {
-    "@alirya/boolean": "^0.11.0-beta.6",
-    "@alirya/function": "^0.15.0-beta.9",
-    "@alirya/object": "^0.37.0-alpha.5",
-    "@alirya/string": "^0.16.0-alpha.4",
-    "@alirya/value": "^0.15.0-beta.2",
-    "@alirya/message": "^0.12.0-alpha.2",
-    "@alirya/code": "^0.3.0-alpha.1",
+    "@alirya/boolean": "0.11.0",
+    "@alirya/function": "0.15.0",
+    "@alirya/object": "0.37.0",
+    "@alirya/string": "0.16.0",
+    "@alirya/value": "0.15.0",
+    "@alirya/message": "0.12.0",
+    "@alirya/code": "0.3.0",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
