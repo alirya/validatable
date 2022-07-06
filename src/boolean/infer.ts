@@ -1,4 +1,4 @@
-import Validatable from '../validatable';
+import Validatable from '../validatable.js';
 
 /**
  * {@link Infer} valid value type

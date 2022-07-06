@@ -1,4 +1,4 @@
-import Validatable from '../validatable';
+import Validatable from '../validatable.js';
 
 export default function Valid<Assumption extends Validatable>(
     validatable : Assumption

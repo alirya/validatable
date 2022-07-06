@@ -1,7 +1,7 @@
-import ValidatableType from '../boolean/validatable';
-import ThrowableType from './error/validatable';
-import Validatable from '../validatable';
-import Callback from '@alirya/function/assert/callback';
+import ValidatableType from '../boolean/validatable.js';
+import ThrowableType from './error/validatable.js';
+import Validatable from '../validatable.js';
+import Callback from '@alirya/function/assert/callback.js';
 
 /**
  * Throw exception if given value is not {@link Validatable} type

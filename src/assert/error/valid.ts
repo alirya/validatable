@@ -1,7 +1,7 @@
-import ValidType from '../string/valid';
-import Validatable from '../../validatable';
-import Invalid, {InvalidParameterType} from '../../error/invalid';
-import ValidatableContainer from '../../validatable/validatable';
+import ValidType from '../string/valid.js';
+import Validatable from '../../validatable.js';
+import Invalid, {InvalidParameterType} from '../../error/invalid.js';
+import ValidatableContainer from '../../validatable/validatable.js';
 
 export function ValidParameters<
     ArgumentType extends Validatable = Validatable

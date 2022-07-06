@@ -1,7 +1,7 @@
-import Validatable from '../validatable';
-import ThrowableValid from './error/valid';
-import BooleanValid from '../boolean/valid';
-import Callback from '@alirya/function/assert/callback';
+import Validatable from '../validatable.js';
+import ThrowableValid from './error/valid.js';
+import BooleanValid from '../boolean/valid.js';
+import Callback from '@alirya/function/assert/callback.js';
 
 /**
  * Throw exception if {@link ValidatableInterface} is not valid (return false)

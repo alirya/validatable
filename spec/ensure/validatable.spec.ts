@@ -1,5 +1,5 @@
-import {ValidatableParameter} from '../../dist/ensure/validatable';
-import Type from '../../dist/boolean/validatable';
+import {ValidatableParameter} from '../../dist/ensure/validatable.js';
+import Type from '../../dist/boolean/validatable.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

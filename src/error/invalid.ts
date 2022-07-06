@@ -1,6 +1,6 @@
-import ValidatableInterface from '../validatable';
-import ValidatableContainer from '../validatable/Validatable';
-import Message from '@alirya/message/message';
+import ValidatableInterface from '../validatable.js';
+import ValidatableContainer from '../validatable/Validatable.js';
+import Message from '@alirya/message/message.js';
 
 
 export type InvalidParameterType<ValidatableType extends ValidatableInterface> = ValidatableContainer<ValidatableType> & Message<string> & Error;

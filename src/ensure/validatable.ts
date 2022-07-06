@@ -1,7 +1,7 @@
-import AssertType from '../assert/validatable';
-import Validatable from '../validatable';
-import ThrowableType from '../assert/error/validatable';
-import Value from '@alirya/value/value';
+import AssertType from '../assert/validatable.js';
+import Validatable from '../validatable.js';
+import ThrowableType from '../assert/error/validatable.js';
+import Value from '@alirya/value/value.js';
 
 /**
  * Throw exception if given value is no {@link Validatable} type

@@ -1,4 +1,4 @@
-import Valid from '../../dist/assert/valid';
+import Valid from '../../dist/assert/valid.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

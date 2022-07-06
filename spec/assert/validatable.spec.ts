@@ -1,4 +1,4 @@
-import Validatable from '../../dist/assert/validatable';
+import Validatable from '../../dist/assert/validatable.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

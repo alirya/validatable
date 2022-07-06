@@ -1,6 +1,6 @@
-import Invalid from '../../dist/boolean/invalid';
-import Validatable from '../../dist/validatable';
-import Value from '@alirya/value/value';
+import Invalid from '../../dist/boolean/invalid.js';
+import Validatable from '../../dist/validatable.js';
+import Value from '@alirya/value/value.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
