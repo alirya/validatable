@@ -1,4 +1,4 @@
-import Type from '../../dist/boolean/validatable';
+import Type from '../../dist/boolean/validatable.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,23 +7,23 @@ describe('valid', function() {
 
     it('class', () =>{
 
-        let data = {valid:true};
+        const data = {valid:true};
         expect(Type(data)).toBeTrue();
 
         if(Type(data)) {
 
-            let type : boolean = data.valid; // compiler pass
+            const type : boolean = data.valid; // compiler pass
         }
     });
 
     it('object', () => {
 
-        let data = { valid : true};
+        const data = { valid : true};
         expect(Type(data)).toBeTrue();
 
         if(Type(data)) {
 
-            let type : boolean = data.valid; // compiler pass
+            const type : boolean = data.valid; // compiler pass
         }
     });
 
@@ -34,14 +34,14 @@ describe('valid', function() {
                 return true;
             }
         }
-        let data = new Getter;
+        const data = new Getter;
 
         expect(Type(data)).toBeTrue();
 
 
         if(Type(data)) {
 
-            let type : boolean = data.valid; // compiler pass
+            const type : boolean = data.valid; // compiler pass
         }
     });
 
@@ -56,25 +56,25 @@ describe('valid', function() {
             }
         }
 
-        let data = new Getter;
+        const data = new Getter;
 
         expect(Type(data)).toBeTrue();
 
 
         if(Type(data)) {
 
-            let type : boolean = data.valid; // compiler pass
+            const type : boolean = data.valid; // compiler pass
         }
     });
 
     it('plain object', () => {
 
-        let data = { valid :  true};
+        const data = { valid :  true};
         expect(Type(data)).toBeTrue();
 
         if(Type(data)) {
 
-            let type : boolean = data.valid; // compiler pass
+            const type : boolean = data.valid; // compiler pass
         }
     });
 
@@ -86,7 +86,7 @@ describe('invalid', function() {
 
     it('class', () => {
 
-        let data = new String('a');
+        const data = new String('a');
         expect(Type(data)).toBeFalse();
 
     });
@@ -99,7 +99,7 @@ describe('invalid', function() {
             }
         }
 
-        let data = new Setter;
+        const data = new Setter;
 
         expect(Type(data)).toBeFalse();
     });

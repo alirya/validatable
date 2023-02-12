@@ -1,6 +1,6 @@
-import Name from '@alirya/object/string/name';
-import Validatable from '../../validatable';
-import ValidatableContainer from '../../validatable/validatable';
+import Name from '@alirya/object/string/name.js';
+import Validatable from '../../validatable.js';
+import ValidatableContainer from '../../validatable/validatable.js';
 
 export function ValidParameters<ValidatableType extends Validatable>(
     validatable: ValidatableType,

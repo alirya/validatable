@@ -1,4 +1,4 @@
-import Valid from '../../dist/assert/valid';
+import Valid from '../../dist/assert/valid.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -11,13 +11,13 @@ describe('valid', function() {
 
     it('class', () =>{
 
-        let validatable = new Test(true);
+        const validatable = new Test(true);
         expect(Valid(validatable)).toBeUndefined();
     });
 
     it('object', () => {
 
-        let object = { valid : true};
+        const object = { valid : true};
         expect(Valid(object)).toBeUndefined();
     });
 
@@ -28,7 +28,7 @@ describe('valid', function() {
                 return true;
             }
         }
-        let data = new Getter;
+        const data = new Getter;
 
         expect(Valid(data)).toBeUndefined();
     });
@@ -44,7 +44,7 @@ describe('valid', function() {
             }
         }
 
-        let data = new GetterSetter();
+        const data = new GetterSetter();
         expect(Valid(data)).toBeUndefined();
     });
 
@@ -55,7 +55,7 @@ describe('invalid', function() {
 
     it('class', () =>{
 
-        let validatable = new Test(false);
+        const validatable = new Test(false);
 
         try {
 
@@ -71,7 +71,7 @@ describe('invalid', function() {
 
     it('object', () => {
 
-        let object = { valid : false};
+        const object = { valid : false};
 
         try {
 
@@ -91,7 +91,7 @@ describe('invalid', function() {
                 return false;
             }
         }
-        let data = new Getter;
+        const data = new Getter;
 
         try {
 
@@ -115,7 +115,7 @@ describe('invalid', function() {
             }
         }
 
-        let data = new GetterSetter();
+        const data = new GetterSetter();
 
         try {
 

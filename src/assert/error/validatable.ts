@@ -1,5 +1,5 @@
-import ValidatableMessage from '../string/validatable';
-import Value from '@alirya/value/value';
+import ValidatableMessage from '../string/validatable.js';
+import Value from '@alirya/value/value.js';
 
 export function ValidatableParameters(
     value : object,

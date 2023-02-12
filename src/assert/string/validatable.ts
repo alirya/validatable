@@ -1,6 +1,6 @@
-import Name from '@alirya/object/string/name';
-import ValidatableType from '../../validatable';
-import Value from '@alirya/value/value';
+import Name from '@alirya/object/string/name.js';
+import ValidatableType from '../../validatable.js';
+import Value from '@alirya/value/value.js';
 /**
  *
  * @param valid

@@ -1,4 +1,4 @@
-import {ValidParameter} from '../../../dist/assert/string/valid';
+import {ValidParameter} from '../../../dist/assert/string/valid.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

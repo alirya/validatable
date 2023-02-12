@@ -1,34 +1,34 @@
-import Valid from '../../dist/boolean/valid';
-import Validatable from '../../dist/validatable';
-import Value from '@alirya/value/value';
+import Valid from '../../dist/boolean/valid.js';
+import Validatable from '../../dist/validatable.js';
+import Value from '@alirya/value/value.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('compiler compatible', function () {
 
-    let argument : Validatable & Value<string> = {
+    const argument : Validatable & Value<string> = {
         valid : true,
         value : 'string'
     };
 
     if(Valid(argument)) {
 
-        let valid : true = argument.valid;
+        const valid : true = argument.valid;
 
         // @ts-expect-error
-        let invalid : false = argument.valid;
+        const invalid : false = argument.valid;
 
-        let boolean : boolean = argument.valid;
+        const boolean : boolean = argument.valid;
 
     } else {
 
-        let value : boolean = argument.valid;
+        const value : boolean = argument.valid;
     }
 });
 
 it('valid', ()=>{
 
-    let argument : Validatable & Value<string> = {
+    const argument : Validatable & Value<string> = {
         valid : true,
         value : 'string'
     };
@@ -39,7 +39,7 @@ it('valid', ()=>{
 
 it('invalid', ()=>{
 
-    let argument : Validatable & Value<string> = {
+    const argument : Validatable & Value<string> = {
         valid : false,
         value : 'string'
     };

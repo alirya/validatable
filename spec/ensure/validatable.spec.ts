@@ -1,5 +1,5 @@
-import {ValidatableParameter} from '../../dist/ensure/validatable';
-import Type from '../../dist/boolean/validatable';
+import {ValidatableParameter} from '../../dist/ensure/validatable.js';
+import Type from '../../dist/boolean/validatable.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,16 +7,16 @@ describe('valid', function() {
 
     it('class', () =>{
 
-        let value = {valid:true};
-        let guarded = ValidatableParameter({value});
+        const value = {valid:true};
+        const guarded = ValidatableParameter({value});
 
         expect(Type(guarded)).toBeTrue();
     });
 
     it('object', () => {
 
-        let value = { valid : true};
-        let guarded = ValidatableParameter({value});
+        const value = { valid : true};
+        const guarded = ValidatableParameter({value});
 
         expect(Type(guarded)).toBeTrue();
     });
@@ -28,9 +28,9 @@ describe('valid', function() {
                 return true;
             }
         }
-        let value = new Getter;
+        const value = new Getter;
 
-        let guarded = ValidatableParameter({value});
+        const guarded = ValidatableParameter({value});
 
         expect(Type(guarded)).toBeTrue();
     });
@@ -46,18 +46,18 @@ describe('valid', function() {
             }
         }
 
-        let value = new Getter;
+        const value = new Getter;
 
-        let guarded = ValidatableParameter({value});
+        const guarded = ValidatableParameter({value});
 
         expect(Type(guarded)).toBeTrue();
     });
 
     it('plain object', () => {
 
-        let value = { valid :  true};
+        const value = { valid :  true};
 
-        let guarded = ValidatableParameter({value});
+        const guarded = ValidatableParameter({value});
 
         expect(Type(guarded)).toBeTrue();
     });
@@ -70,7 +70,7 @@ describe('invalid', function() {
 
     it('class', () => {
 
-        let value = new String('a');
+        const value = new String('a');
 
         try {
 
@@ -92,7 +92,7 @@ describe('invalid', function() {
             }
         }
 
-        let value = new Setter;
+        const value = new Setter;
 
         try {
 

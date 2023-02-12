@@ -1,4 +1,4 @@
-import Validatable from '../../dist/assert/validatable';
+import Validatable from '../../dist/assert/validatable.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -11,13 +11,13 @@ describe('valid', function() {
 
     it('class', () =>{
 
-        let data = new Test(true);
+        const data = new Test(true);
         expect(Validatable(data)).toBeUndefined();
     });
 
     it('object', () => {
 
-        let object = { valid : true};
+        const object = { valid : true};
         expect(Validatable(object)).toBeUndefined();
     });
 
@@ -28,7 +28,7 @@ describe('valid', function() {
                 return true;
             }
         }
-        let data = new Getter;
+        const data = new Getter;
 
         expect(Validatable(data)).toBeUndefined();
     });
@@ -54,7 +54,7 @@ describe('invalid', function() {
 
     it('class', () => {
 
-        let data = new String('a');
+        const data = new String('a');
 
         try {
 
@@ -76,7 +76,7 @@ describe('invalid', function() {
             }
         }
 
-        let data = new Setter;
+        const data = new Setter;
 
         try {
 

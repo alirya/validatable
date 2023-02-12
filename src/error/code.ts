@@ -1,8 +1,8 @@
-import Invalid from './invalid';
-import ValidatableInterface from '../validatable';
-import CodeInterface from '@alirya/code/code';
-import ValidatableContainer from '../validatable/validatable';
-import Message from '@alirya/message/message';
+import Invalid from './invalid.js';
+import ValidatableInterface from '../validatable.js';
+import CodeInterface from '@alirya/code/code.js';
+import ValidatableContainer from '../validatable/validatable.js';
+import Message from '@alirya/message/message.js';
 
 export class CodeParameters<
     ValidatableType extends ValidatableInterface,

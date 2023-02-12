@@ -1,5 +1,5 @@
-import Validatable from '../validatable';
-import TypeBoolean from '@alirya/boolean/boolean';
+import Validatable from '../validatable.js';
+import TypeBoolean from '@alirya/boolean/boolean.js';
 
 /**
  * check if {@param value} is compatible to {@link Validatable} type
