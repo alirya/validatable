@@ -1,8 +1,8 @@
 import Invalid from './invalid.js';
 import ValidatableInterface from '../validatable.js';
-import CodeInterface from '@alirya/code/code.js';
+import CodeInterface from '@axiona/code/code.js';
 import ValidatableContainer from '../validatable/validatable.js';
-import Message from '@alirya/message/message.js';
+import Message from '@axiona/message/message.js';
 
 export class CodeParameters<
     ValidatableType extends ValidatableInterface,

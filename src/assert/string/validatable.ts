@@ -1,6 +1,6 @@
-import Name from '@alirya/object/string/name.js';
+import Name from '@axiona/object/string/name.js';
 import ValidatableType from '../../validatable.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 /**
  *
  * @param valid

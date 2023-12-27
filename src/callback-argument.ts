@@ -1,8 +1,8 @@
 import Validatable from './validatable.js';
-import ArgumentContainer from '@alirya/function/argument/argument.js';
-import Validation from '@alirya/boolean/validation/validation.js';
-import Callable from '@alirya/function/callable.js';
-import {CallParameter} from '@alirya/function/argument/value/call.js';
+import ArgumentContainer from '@axiona/function/argument/argument.js';
+import Validation from '@axiona/boolean/validation/validation.js';
+import Callable from '@axiona/function/callable.js';
+import {CallParameter} from '@axiona/function/argument/value/call.js';
 
 /**
  * create validatable from callback

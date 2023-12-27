@@ -1,4 +1,4 @@
-import Name from '@alirya/object/string/name.js';
+import Name from '@axiona/object/string/name.js';
 import Validatable from '../../validatable.js';
 import ValidatableContainer from '../../validatable/validatable.js';
 

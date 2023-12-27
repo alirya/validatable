@@ -1,5 +1,5 @@
 import Validatable from './validatable.js';
-import Validation from '@alirya/boolean/validation/validation.js';
+import Validation from '@axiona/boolean/validation/validation.js';
 
 /**
  * create validatable from callback
